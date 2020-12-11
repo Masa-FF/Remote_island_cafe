@@ -1,5 +1,3 @@
-# Remoteisland_cafe
-
 # 離島カフェ
 
 ## サイト概要
