@@ -64,3 +64,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem 'devise'
+
+
+#最終行に書く
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
