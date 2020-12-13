@@ -65,8 +65,7 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem 'devise'
 
-
-#最終行に書く
+#最終行に記述
 gem 'dotenv-rails'
 group :production do
   gem 'mysql2'
