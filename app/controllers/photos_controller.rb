@@ -7,7 +7,6 @@ class PhotosController < ApplicationController
 
   def show
     @photo = Photo.find(params[:id])
-    #favoriteを記述する
   end
 
   def new

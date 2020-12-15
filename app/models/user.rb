@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   has_many :photos, dependent: :destroy
-  #投稿モデルへのアソシエーション
+  has_many :favorites, dependent: :destroy
 end

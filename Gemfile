@@ -66,6 +66,9 @@ gem "refile-mini_magick"
 gem 'devise'
 gem 'rails-i18n'
 
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
+
 #最終行に記述
 gem 'dotenv-rails'
 group :production do
