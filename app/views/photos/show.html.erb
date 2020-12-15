@@ -1,2 +1,10 @@
 <h1>Photos#show</h1>
 <p>Find me in app/views/photos/show.html.erb</p>
+
+<%= link_to "一覧へ戻る", photo_path %>
+
+<li>
+  <% if @photo.user == current_user %>
+  <%= link_to "削除", photo_path(@photo), method: :delete %>
+  <% end 
+</li>
