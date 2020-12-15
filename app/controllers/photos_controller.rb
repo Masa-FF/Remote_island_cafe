@@ -2,9 +2,12 @@ class PhotosController < ApplicationController
   #before_action :authenticate_user!
   
   def index
+    @photos = Photo.all
   end
 
   def show
+    @photo = Photo.find(params[:id])
+    #favoriteを記述する
   end
 
   def new
@@ -22,6 +25,12 @@ class PhotosController < ApplicationController
 
   def edit
   end
+  
+  def destroy
+     @photo = Photo.find(params[:id])
+     @photo.destroy
+     redirect_to photos_path
+  end  
   
   #投稿機能用ストロングパラメーター
   private
