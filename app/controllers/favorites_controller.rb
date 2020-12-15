@@ -8,7 +8,7 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    photo = Photo.find(params[:photo.id])
+    photo = Photo.find(params[:photo_id])
     favorite = current_user.favorites.find_by(photo_id: photo.id)
     favorite.destroy
     redirect_to photo_path(photo)
