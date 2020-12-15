@@ -1,3 +1,38 @@
 // Place all the styles related to the photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul {
+    list-style: none;
+}
+
+// ここからindex
+
+.photo_tile {
+	overflow:		hidden;
+	margin:			10px 8px 10px 16px;
+	position:		relative;	/* 相対位置指定 */
+}
+.photo_tile .caption {
+	font-size:		130%;
+	text-align: 		center;
+	padding-top:		80px;
+	color:			#fff;
+}
+.photo_tile .mask {
+	width:			250px;
+	height:			250px;
+	position:		absolute;	/* 絶対位置指定 */
+	top:			0;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.4);	/* マスクは半透明 */
+	-webkit-transition:	all 0.2s ease;
+	transition:		all 0.2s ease;
+}
+
+.photo_tile :hover .mask {
+	opacity:		1;	/* マスクを表示する */
+}
+
+// ここまでindex
