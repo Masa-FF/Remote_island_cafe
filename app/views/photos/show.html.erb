@@ -11,12 +11,12 @@
 
 
 <li>
-  <%= link_to "一覧へ戻る", photos_path %>
+  <%= link_to "一覧へ戻る", photos_path, class:"d-underline" %>
 </li>
 
 <li>
   <% if @photo.user == current_user %>
-  <%= link_to "削除", photo_path(@photo), method: :delete, data: {confirm: "削除しますか？"} %>
+  <%= link_to "削除", photo_path(@photo), method: :delete, data: {confirm: "削除しますか？"}, class:"d-underline" %>
   <% end %>
 </li>
 

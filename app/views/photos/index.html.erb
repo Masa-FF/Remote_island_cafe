@@ -1,7 +1,7 @@
 <h1>Photos#index</h1>
 <p>Find me in app/views/photos/index.html.erb</p>
 
-<%= link_to "新規投稿", new_photo_path %>
+<%= link_to "新規投稿", new_photo_path, class:"d-underline" %>
 
 <% @photos.each do |photo| %>
 <ul>
@@ -10,7 +10,13 @@
         <%= link_to photo_path(photo.id) do %>
         <%= attachment_image_tag photo, :image, size: "250x250", format: 'jpeg' %>
         <div class="mask">
-          <div class="caption"><%= photo.title %></div>
+          <div class="caption">
+            <%= photo.title %>
+            <br>
+            <br>
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            <%= photo.favorites.count %>
+          </div>
         </div>
         <% end %>
       </div>  

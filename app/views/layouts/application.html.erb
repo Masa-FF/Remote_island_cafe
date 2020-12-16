@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <title>離島カフェ</title>
@@ -10,6 +11,16 @@
   </head>
 
   <body>
+    <header class="page-header wrapper">
+      <h1><%= link_to "離島カフェ", root_path, :style=>"color: #111120;" %></h1>
+        <nav>
+          <ul class="main-nav">
+            <li><%= link_to "Top", root_path, :style=>"color: #111120;" %></li>
+            <li><%= link_to "Menu", menu_path, :style=>"color: #111120;" %></li>
+            <li><%= link_to "Interaction", photos_path, :style=>"color: #111120;" %></li>
+          </ul>
+        </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
