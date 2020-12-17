@@ -1,0 +1,66 @@
+.login_tile h2 {
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.login_tile {
+  width: 500px;
+  height: 440px;
+  margin: 0 auto 50px;
+  background: rgba(255,255,255,.6);
+  border-radius: 20px 20px 20px 20px;
+}
+
+form {
+  width: 100%;
+  text-align: center;
+  padding: 30px auto 0;
+}
+
+
+.field {
+  margin: 0 auto;
+}
+
+.actions {
+  text-align: center;
+  margin: 40px auto 30px;
+}
+
+.submit_button {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  font-size: 12px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 4px;
+  background-image: linear-gradient(-90deg, #FF006E, #FFD500);
+  transition: .5s;
+  background-size: 200%;
+}
+
+.submit_button:hover {
+  background-position: right;
+}
+
+
+.back_image {
+  height: 800px;
+  width: 100%;
+  background-image: url('boke12151229.jpg');
+  background-position: right;
+}
+
+.container {
+  padding-top: 140px;
+}
+
+.links {
+  text-align :center;
+  color: #666666;
+}

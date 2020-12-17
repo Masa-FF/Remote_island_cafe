@@ -2,6 +2,7 @@
 <p>Find me in app/views/photos/index.html.erb</p>
 
 <%= link_to "新規投稿", new_photo_path, class:"d-underline" %>
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"d-underline" %>
 
 <% @photos.each do |photo| %>
 <ul>
