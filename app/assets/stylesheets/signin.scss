@@ -20,8 +20,10 @@ form {
 }
 
 
-.field {
+.field_box {
   margin: 0 auto;
+  width: 320px;
+  text-align: left;
 }
 
 .actions {
@@ -50,14 +52,14 @@ form {
 
 
 .back_image {
-  height: 800px;
+  height: 980px;
   width: 100%;
-  background-image: url('boke12151229.jpg');
-  background-position: right;
+  background-image: image-url('boke12151229.jpg');
+  background-position: left;
 }
 
 .container {
-  padding-top: 140px;
+  padding-top: 150px;
 }
 
 .links {

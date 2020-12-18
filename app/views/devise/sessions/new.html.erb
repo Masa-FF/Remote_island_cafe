@@ -3,15 +3,15 @@
     <div class="login_tile">
       <h2>Log in</h2>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="field">
+        <div class="field_box">
           <br>
           <%= f.label :メールアドレス %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", :size => "40*30" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", :size => "44*30" %>
         </div>
         <br>
-        <div class="field">
+        <div class="field_box">
           <%= f.label :パスワード %><br />
-          <%= f.password_field :password, autocomplete: "current-password", :size => "40*30" %>
+          <%= f.password_field :password, autocomplete: "current-password", :size => "44*30" %>
         </div>
         <br>
         <% if devise_mapping.rememberable? %>
