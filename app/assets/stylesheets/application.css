@@ -67,7 +67,7 @@ img {
 
 footer {
   width: 100%;
-  height: 130px;
+  height: 220px;
   color: #3f2c3f;
   background-color: #eaf6fd;
   text-align: center;
@@ -75,5 +75,5 @@ footer {
 
 .footer-text{
   margin-top: 0;
-  padding-top: 54px;
+  padding-top: 95px;
 }
