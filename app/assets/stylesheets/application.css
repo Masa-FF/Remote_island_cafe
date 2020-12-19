@@ -24,7 +24,7 @@ html {
   }
 
 header {
-  height: 90px;
+  height: 105px;
   font-family: 'Philosopher', serif;
 }
 
@@ -43,8 +43,10 @@ img {
 }
 
 .main-nav {
+  font-weight: 500;
+  font-size: 2.125rem;
+  font-family: 'Philosopher', serif;
   display: flex;
-  font-size: 1.25rem;
   text-transform: uppercase;
   margin-top: 35px;
   list-style: none;
@@ -61,7 +63,7 @@ img {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 3%;
 }
