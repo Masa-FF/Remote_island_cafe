@@ -25,11 +25,12 @@ html {
 
 header {
   height: 90px;
+  font-family: 'Philosopher', serif;
 }
 
 
 body {
-  font-family: 中ゴシックBBB, "Gothic Medium BBB", "Noto Sans JP", sans-serif;
+  /*font-family: 中ゴシックBBB, "Gothic Medium BBB", "Noto Sans JP", sans-serif;*/
   color: #444444;
 }
 
@@ -77,3 +78,4 @@ footer {
   margin-top: 0;
   padding-top: 95px;
 }
+
