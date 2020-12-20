@@ -75,3 +75,29 @@
   font-family: 'Philosopher', serif;
   line-height: 40px;
 }
+
+.location .wrapper {
+  width: 800px;
+  height: 940px;
+  padding : 0;
+  // background-color: #80a491;
+}
+
+.sub-title {
+  font-size: 1.9rem;
+  font-family: 'Philosopher', serif;
+  padding-top: 120px;
+  margin-bottom: 30px;
+  // background-color: green;
+}
+
+.location-info p {
+  font-size: 1.4rem;
+  font-family: 'Philosopher', serif;
+  margin-bottom: 100px;
+  line-height: 42px;
+}
+
+.locaton-map {
+  width: 100%;
+}

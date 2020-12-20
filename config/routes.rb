@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   end
   get 'top' => 'homes#top'
   get 'menu' => 'homes#menu'
+  get 'access' => 'homes#access'
 end
