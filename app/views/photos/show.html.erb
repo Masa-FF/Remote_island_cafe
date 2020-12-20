@@ -20,18 +20,6 @@
   <% end %>
 </li>
 
-<% if @photo.favorited_by?(current_user) %>
-<li>
-  <%= link_to photo_favorites_path(@photo), method: :delete do %>
-    <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
-    <%= @photo.favorites.count %> 
-  <% end %>
-</li>
-<% else %>
-<li>
-  <%= link_to photo_favorites_path(@photo), method: :post do %>
-    <i class="fa fa-heart-o" aria-hidden="true"></i>
-    <%= @photo.favorites.count %> 
-  <% end %>
-</li>
-<% end %>
+<div id="favorites_buttons_<%= @photo.id %>">
+    <%= render partial: 'favorites/favorite', locals: { photo: @photo} %>
+</div>
