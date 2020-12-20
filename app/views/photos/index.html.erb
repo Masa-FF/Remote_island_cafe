@@ -1,5 +1,15 @@
-<h1>Photos#index</h1>
-<p>Find me in app/views/photos/index.html.erb</p>
+<article class="menu-base">
+  <div class="base-title">
+    <h2>SHARE</h2>
+    <p>島を愛するみんなに写真をシェアしてみましょう</p>
+  </div>
+</article>
+
+<% if flash[:notice] %>
+  <div class="notion_message">
+    <p><%= flash[:notice] %></p>
+  </div>
+<% end %>
 
 <%= link_to "新規投稿", new_photo_path, class:"d-underline" %>
 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"d-underline" %>
