@@ -65,12 +65,13 @@ ul {
 }
 
 .section {
-	width: 60%;
+	width: 822px;
 	height: 1000px;
 	margin: 50px auto 0;	
 	display: flex;
 	flex-wrap: wrap;
 	align-content: flex-start;
+	// justify-content: space-around;
 }
 
 .photo_form {
