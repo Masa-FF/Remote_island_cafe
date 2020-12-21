@@ -1,4 +1,9 @@
-<h1>新規投稿</h1>
+<article class="menu-base">
+  <div class="base-title">
+    <h2>POST PHOTO</h2>
+    <p>島の写真を投稿してみましょう！</p>
+  </div>
+</article>
 
 <% if @photo.errors.any? %>
   <div>
@@ -10,14 +15,18 @@
   </div>
 <% end %>
 
-<%= form_with model:@photo, local:true do |f| %>
-<%= f.attachment_field :image %>
-<br>
-<%= f.label :タイトル %> 
-<%= f.text_field :title, size: "25x1" %>
-<br>
-<%= f.label :コメント %> 
-<%= f.text_area :body, size: "25x3", placeholder:"コメントを記入" %>
-<br>
-<%= f.submit '投稿' %>
-<% end %>
+<div class="section">
+  <div class="photo_form">
+    <%= form_with model:@photo, local:true do |f| %>
+    <%= f.attachment_field :image %>
+    <br>
+    <%= f.label :タイトル %> 
+    <%= f.text_field :title, size: "25x1" %>
+    <br>
+    <%= f.label :コメント %> 
+    <%= f.text_area :body, size: "25x10", placeholder:"コメントを記入" %>
+    <br>
+    <%= f.submit '投稿' %>
+    <% end %>  
+  </div>
+</div>

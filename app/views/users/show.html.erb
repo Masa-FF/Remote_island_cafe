@@ -1,21 +1,16 @@
 <article class="menu-base">
   <div class="base-title">
-    <h2>SHARE</h2>
-    <p>島を愛するみんなに写真をシェアしてみましょう</p>
+    <h2>MY PAGE</h2>
+    <p>登録情報の確認ができます</p>
   </div>
 </article>
 
-<% if flash[:notice] %>
-  <div class="notion_message">
-    <p><%= flash[:notice] %></p>
-  </div>
-<% end %>
-
-<div class="plus_button">
-  <%= link_to image_tag("icon_001523_128.png"), new_photo_path %>
-</div>
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"d-underline" %>
 
 <div class="section">
+  <h3>ようこそ <%= @user.name %> さん</h3>
+
+  <p>投稿写真一覧</p>
   <% @photos.each do |photo| %>
   <ul>
       <li>
@@ -35,5 +30,5 @@
         </div>  
       </li>
   </ul>
-  <% end %>  
+  <% end %>
 </div>
