@@ -1,7 +1,7 @@
 <article class="menu-base">
   <div class="base-title">
-    <h2>MY PAGE</h2>
-    <p>登録情報の確認ができます</p>
+    <h2>PROFILE</h2>
+    <p>プロフィール</p>
   </div>
 </article>
 
@@ -11,13 +11,24 @@
   </div>
 <% end %>
 
+<div class="profile_container">
+  <div class="profile_image">
+    <%= attachment_image_tag @user, :profile_image, size:"80x80", format: 'png', fallback: "no_image.png" %>
+  </div>
+  <div class="profile_body">
+    <%= @user.name %> さん
+  </div>
+</div>
+
 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"d-underline" %>
+
+<% if @user == current_user %>
 <%= link_to "会員情報を編集", edit_user_path(current_user), class:"d-underline" %>
+<% end %>
+
+<h3 class="profile-index">投稿写真一覧</h3>
 
 <div class="section">
-  <h3>ようこそ <%= @user.name %> さん</h3>
-
-  <p>投稿写真一覧</p>
   <% @photos.each do |photo| %>
   <ul>
       <li>

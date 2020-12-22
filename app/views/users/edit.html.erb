@@ -1,18 +1,27 @@
 <article class="menu-base">
   <div class="base-title">
-    <h2>EDIT PROFILE</h2>
+    <h2>MY PROFILE</h2>
     <p>会員情報を編集</p></p>
   </div>
 </article>
 
 <div class="section">
   <%= form_with model:@user, local:true do |f| %>
+  <label>プロフィール画像</label>
+  <br>
+  <br>
+  <%= attachment_image_tag @user, :profile_image, size:"60x60", format: 'png', fallback: "no_image.png" %><br>
+  <%= f.attachment_field :profile_image %>
+  <br>
+  <br>
   <label>ニックネーム</label>
-  <%= f.text_field :name, autofocus: true, placeholder:"名前" %>  
+  <%= f.text_field :name, autofocus: true, placeholder:"名前" %>
+  <br>
   <br>
   <label>メールアドレス</label>
-  <%= f.text_field :email, autofocus: true, placeholder:"メールアドレス" %>
-  <br>  
+  <%= f.text_field :email, placeholder:"メールアドレス" %>
+  <br>
+  <br>
   <%= f.submit "変更を保存" %>
   <% end %>
 </div>
