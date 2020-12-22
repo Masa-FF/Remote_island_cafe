@@ -25,9 +25,6 @@ class PhotosController < ApplicationController
     render 'photos/new'
     end
   end
-
-  def edit
-  end
   
   def destroy
      @photo = Photo.find(params[:id])
