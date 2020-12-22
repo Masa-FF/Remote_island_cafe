@@ -5,7 +5,14 @@
   </div>
 </article>
 
+<% if flash[:notice] %>
+  <div class="notion_message">
+    <p><%= flash[:notice] %></p>
+  </div>
+<% end %>
+
 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"d-underline" %>
+<%= link_to "会員情報を編集", edit_user_path(current_user), class:"d-underline" %>
 
 <div class="section">
   <h3>ようこそ <%= @user.name %> さん</h3>
@@ -32,6 +39,3 @@
   </ul>
   <% end %>
 </div>
-
-
-<p>ああああ</p>

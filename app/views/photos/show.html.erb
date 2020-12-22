@@ -1,11 +1,12 @@
-<h1>Photos#show</h1>
-<p>Find me in app/views/photos/show.html.erb</p>
+<article class="menu-base">
+  <div class="base-title">
+    <h2><%= @photo.title %></h2>
+    <p>投稿者： <%= @user.name %> さん</p></p>
+  </div>
+</article>
 
-投稿者 <%= @user.name %> さん<br>
 
 <%= attachment_image_tag @photo, :image, size: "500x500", format: 'jpeg' %>
-<br>
-<%= @photo.title %>
 <br>
 <%= @photo.body %>
 <br>

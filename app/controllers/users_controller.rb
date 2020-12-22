@@ -3,4 +3,20 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @photos = Photo.where(user_id: @user)
   end
+  
+  def edit
+    @user = User.find(params[:id])
+  end
+  
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    flash[:notice] = 'プロフィールを編集しました。' 
+    redirect_to user_path(@user)
+  end
+  
+  private
+  def user_params
+    params.require(:user).permit(:name, :email)
+  end  
 end
