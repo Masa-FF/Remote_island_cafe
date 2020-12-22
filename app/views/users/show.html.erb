@@ -20,11 +20,12 @@
   </div>
 </div>
 
-<%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"d-underline" %>
-
-<% if @user == current_user %>
-<%= link_to "会員情報を編集", edit_user_path(current_user), class:"d-underline" %>
-<% end %>
+<div class="profile_link">
+  <% if @user == current_user %>
+  <%= link_to "会員情報を編集", edit_user_path(current_user), class:"d-underline" %>  |  
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"d-underline" %>
+  <% end %>
+</div>
 
 <h3 class="profile-index">投稿写真一覧</h3>
 
