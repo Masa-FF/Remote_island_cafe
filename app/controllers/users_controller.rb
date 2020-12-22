@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
-    @photos = Photo.where(user_id: @user)
+    @photos = Photo.where(user_id: @user).page(params[:page]).reverse_order
+    #ページネーション(Kaminariを使用)
   end
   
   def edit

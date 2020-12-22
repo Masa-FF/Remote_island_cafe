@@ -2,7 +2,8 @@ class PhotosController < ApplicationController
   before_action :authenticate_user!
   
   def index
-    @photos = Photo.all
+    @photos = Photo.all.page(params[:page]).reverse_order
+    #ページネーション(Kaminariを使用)
   end
 
   def show

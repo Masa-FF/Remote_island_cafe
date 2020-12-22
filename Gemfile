@@ -68,6 +68,7 @@ gem 'rails-i18n'
 gem 'font-awesome-rails'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+gem 'kaminari','~> 1.2.1'
 
 #最終行に記述
 gem 'dotenv-rails'
