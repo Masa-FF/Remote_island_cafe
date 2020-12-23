@@ -3,21 +3,29 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .profile_container {
-  height: 150px;
+  height: 230px;
   width: 100%;
   // background-color: #FEF1E1;
   display: flex;
   justify-content: center;
 }
 
+.out_line {
+  margin: auto auto auto;  
+}
+
+.profile_box {
+  display: flex;
+  flex :wrap;
+}
+
 .profile_image {
-  margin-top: 20px;
   border-radius: 50%;
+  margin: auto 0px auto;
 }
 
 .profile_body {
-  margin-top: 60px;
-  margin-left: 30px;
+  margin: auto 0 auto 35px ;
   font-size: 2.75rem;
   font-family: 'Philosopher', serif;
 }
@@ -27,12 +35,21 @@
 }
 
 .profile-index {
-  text-align: center;
+  display: flex;
+	align-items: center;
   font-size: 1.75rem;
   font-family: 'Philosopher', serif;  
-  margin-top: 55px;
+}
+
+.profile-index:before, .profile-index:after {
+  content: "";
+  flex-grow: 1;
+  height: 1px; 
+  background: #000; 
+  margin:0 2em; 
 }
 
 .profile_link {
   text-align: center;
+  margin-top: 0;
 }

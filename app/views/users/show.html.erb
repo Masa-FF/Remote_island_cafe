@@ -12,22 +12,28 @@
 <% end %>
 
 <div class="profile_container">
-  <div class="profile_image">
-    <%= attachment_image_tag @user, :profile_image, size:"80x80", format: 'png', fallback: "no_image.png" %>
-  </div>
-  <div class="profile_body">
-    <%= @user.name %> さん
+  <div class="out_line">
+    <div class="profile_box">
+      <div class="profile_image">
+        <%= attachment_image_tag @user, :profile_image, size:"80x80", format: 'png', fallback: "no_image.png" %>
+      </div>
+      <div class="profile_body">
+        <%= @user.name %> さん
+      </div>    
+    </div>
+    <div class="profile_link">
+      <% if @user == current_user %>
+      <br>
+      <%= link_to "会員情報を編集", edit_user_path(current_user), class:"d-underline" %>  |  
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"d-underline" %>
+      <% end %>
+    </div>
   </div>
 </div>
 
-<div class="profile_link">
-  <% if @user == current_user %>
-  <%= link_to "会員情報を編集", edit_user_path(current_user), class:"d-underline" %>  |  
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"d-underline" %>
-  <% end %>
+<div class="profile-index">
+  <p>投稿写真一覧</p>
 </div>
-
-<h3 class="profile-index">投稿写真一覧</h3>
 
 <div class="section">
   <% @photos.each do |photo| %>
