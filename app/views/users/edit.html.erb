@@ -29,6 +29,9 @@
       <br>
       <%= f.submit "変更を保存", :class => 'submit_button' %>
       <% end %>
+      <div class="withdrawal_link">
+        <%= link_to "退会する", user_path(current_user), method: :delete, class:"d-underline", "data-confirm" => "本当に退会しますか？" %>
+      </div>
     </div>
   </div>
 </div>

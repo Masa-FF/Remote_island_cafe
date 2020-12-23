@@ -27,6 +27,13 @@ class UsersController < ApplicationController
     end  
   end
   
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:notice] = '退会が完了しました。'
+    redirect_to root_path
+  end
+  
   private
   def user_params
     params.require(:user).permit(:name, :email, :profile_image)
