@@ -5,24 +5,44 @@
   </div>
 </article>
 
+<div class="post_photo">
+  <div class="profile_container_2">
+    <div class="out_line_2">
+      <div class="profile_box_2">
+        <div class="profile_image_2">
+          <%= attachment_image_tag @user, :profile_image, size:"80x80", format: 'png', fallback: "no_image.png" %>
+        </div>
+        <div class="profile_body_2">
+          <%= link_to @user.name, user_path(@user) %> 
+        </div>    
+      </div>
+    </div>
+  </div>  
+  
+  <div class="image_box">
+    <%= attachment_image_tag @photo, :image, size: "500x500", format: 'jpeg' %>
+  </div>
+  <div class="under_box">
+    <div id="favorites_buttons_<%= @photo.id %>">
+      <%= render partial: 'favorites/favorite', locals: { photo: @photo} %>
+    </div>
+  </div>
+  <div class="comment_body">
+    <br>
+    <h4><%= @photo.body %></h4>
+    <br>
+    <br>
+    <p><%= @photo.created_at.to_s(:datetime_jp) %> </p>
+    <br>
+    <br>
+    <% if @user == current_user %>
+    <div class="delete_button">
+      <%= link_to "投稿を削除", photo_path(@photo), method: :delete, data: {confirm: "削除しますか？"}, class:"d-underline" %>
+    </div>
+    <% end %>
+  </div>
+</div>
 
-<%= attachment_image_tag @photo, :image, size: "500x500", format: 'jpeg' %>
-<br>
-<%= @photo.body %>
-<br>
-<%= @photo.created_at.to_s(:datetime_jp) %>
-
-
-<li>
-  <%= link_to "一覧へ戻る", photos_path, class:"d-underline" %>
-</li>
-
-<li>
-  <% if @user == current_user %>
-  <%= link_to "削除", photo_path(@photo), method: :delete, data: {confirm: "削除しますか？"}, class:"d-underline" %>
-  <% end %>
-</li>
-
-<div id="favorites_buttons_<%= @photo.id %>">
-  <%= render partial: 'favorites/favorite', locals: { photo: @photo} %>
+<div class="link_buttons">
+ <%= link_to "一覧へ戻る", photos_path, class:"d-underline" %>  |  <%= link_to "投稿者の詳細", user_path(@user) %>
 </div>

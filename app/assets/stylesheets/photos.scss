@@ -79,3 +79,91 @@ ul {
   font-family: 'Philosopher', serif;
   text-align: start;
 }
+
+.post_photo {
+	width: 500px;
+	margin: 50px auto 0;
+	box-shadow: 0 0 3px gray;
+}	
+
+
+.image-box {
+	margin-left: 50px;
+}
+
+.under_box {
+	margin-top: 10px;
+	padding-right: 10px;
+ 	text-align: right;
+ 	list-style: none;
+  font-size: 2.25rem;
+  font-family: 'Philosopher', serif;
+}
+
+.under_box ul {
+	display: flex;
+	list-style: none;
+  font-size: 1.45rem;
+  font-family: 'Philosopher', serif;
+}
+
+.under_box li {
+	margin-left: auto;
+}
+
+.profile_container_2 {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.out_line_2 {
+  margin: auto auto auto 10px;  
+}
+
+.profile_box_2 {
+  display: flex;
+  flex :wrap;
+}
+
+.profile_image_2 {
+  border-radius: 50%;
+  margin: auto 0px auto;
+  
+}
+
+.profile_body_2 {
+  margin: auto 0 auto 25px ;
+  font-size: 1.75rem;
+  font-family: 'Philosopher', serif;
+}
+
+.comment_body {
+	width: 450px;
+	margin: 5px auto auto auto;
+}
+
+.comment_body h4 {
+	font-size: 1.345rem;
+  font-family: 'Philosopher', serif;
+}
+
+.comment_body p {
+	font-size: 1.1rem;
+  font-family: 'Philosopher', serif;
+  text-align: right;
+}
+
+.delete_button {
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.link_buttons {
+	text-align: center;
+	margin-top: 70px;
+	margin-bottom: 50px;
+	height: 50px
+
+}
