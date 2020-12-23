@@ -15,18 +15,26 @@
   </div>
 <% end %>
 
-<div class="section">
-  <div class="photo_form">
-    <%= form_with model:@photo, local:true do |f| %>
-    <%= f.attachment_field :image %>
-    <br>
-    <%= f.label :タイトル %> 
-    <%= f.text_field :title, size: "25x1" %>
-    <br>
-    <%= f.label :コメント %> 
-    <%= f.text_area :body, size: "25x10", placeholder:"コメントを記入" %>
-    <br>
-    <%= f.submit '投稿' %>
-    <% end %>  
+
+  <div class="back_image_2">
+    <div class="container">
+      <div class="signup_tile">
+        <h2>写真投稿</h2>
+        <%= form_with model:@photo, local:true do |f| %>
+        <%= f.attachment_field :image %>
+        <br>
+        <br>
+        <%= f.label :タイトル %> 
+        <%= f.text_field :title, size: "25x1" %>
+        <br>
+        <br>
+        <%= f.label :コメント %> 
+        <%= f.text_area :body, size: "27x10", placeholder:"コメントを記入" %>
+        <br>
+        <br>
+        <br>
+        <%= f.submit '投稿', :class => 'submit_button' %>
+        <% end %>  
+      </div>
+    </div>
   </div>
-</div>
