@@ -76,7 +76,9 @@
     </div>
     <div class="comments-destroy">
       <% if comment.user == current_user %>
-      <%= link_to "削除", photo_comment_path(comment.photo.id, comment.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+      <%= link_to photo_comment_path(comment.photo.id, comment.id), method: :delete, "data-confirm" => "本当に削除しますか？" do %>
+      <i class="fa fa-trash-o"></i>
+      <% end %>
       <% else %>
       <% end %>    
     </div>

@@ -2,8 +2,9 @@
 
 ## サイト概要
 
-とある離島にあるカフェの web ページ。
-島外からの観光客へ向け、交流することができる写真投稿交流ができるサービスを開始する。
+香川県の離島にあるカフェの web ページ。
+当カフェは島内の客をメインターゲットにしていたが、島外の人に島の魅力を知ってもらうことで、
+離島の活性化に繋げようと試みる。
 
 ### サイトテーマ
 
@@ -12,8 +13,7 @@
 ### テーマを選んだ理由
 
 少子高齢化、人口減少が社会問題となる昨今、離島が抱えるこれらの問題は特に顕著にあらわれている。
-そん中、離島に住みたい、旅行に行きたいという需要を喚起するため、島の魅力を交換し合う
-コミュニケーションツールを作成する。
+そん中、離島に住みたい、旅行に行きたいという需要を喚起するため、島の魅力をシェアできるWebページを作成する。
 
 ### ターゲットユーザ
 
@@ -29,6 +29,16 @@
 ## 設計書
 
 ### 機能一覧
+- ログイン機能
+- プロフィール編集機能
+- 退会機能
+- 投稿機能
+- 投稿削除機能
+- コメント機能
+- コメント削除機能
+- いいね機能
+- いいね解除機能
+
 
 https://docs.google.com/spreadsheets/d/1JiqsbVQw7OCCq2JCYRoDiwcoR6gN-XEgci_gKmNW190/edit#gid=0
 
@@ -43,6 +53,3 @@ https://docs.google.com/spreadsheets/d/1JiqsbVQw7OCCq2JCYRoDiwcoR6gN-XEgci_gKmNW
 ## 使用素材
 
 - 「ばくたそ」https://www.pakutaso.com/
-- 「GIRLY DROP」https://girlydrop.com/
-- 「StockSnap.io」https://stocksnap.io/
-- 「Pixabay」https://pixabay.com/ja/
