@@ -5,12 +5,20 @@
   </div>
 </article>
 
+<% if flash[:notice] %>
+  <div class="notion_message">
+    <p><%= flash[:notice] %></p>
+  </div>
+<% end %>
+
 <div class="post_photo">
   <div class="profile_container_2">
     <div class="out_line_2">
       <div class="profile_box_2">
         <div class="profile_image_2">
+          <%= link_to user_path(@user) do %> 
           <%= attachment_image_tag @user, :profile_image, size:"80x80", format: 'png', fallback: "no_image.png" %>
+          <% end %>
         </div>
         <div class="profile_body_2">
           <%= link_to @user.name, user_path(@user) %> 
@@ -45,23 +53,35 @@
     <% end %>
   </div>
 </div>
-
+<br>
+<br>
 <%= form_with model: [@photo, @comment], local: true do |f| %>
-  <%= f.text_area :comment, placeholder: "コメントを記入" %>
+  <%= f.text_field :comment, placeholder: "コメントを記入", :size => "60*50" %>
   <%= f.submit '投稿' %>
 <% end %>
 
-<div class="comments">
-  <% @comments.each do |comment| %>
-    <%= attachment_image_tag @photo, :image, size: "100x100", format: 'jpeg' %>
-    <%= comment.user.name %>
-    <%= comment.comment %>
-    <% if comment.user == current_user %>
-    <%= link_to "削除", photo_comment_path(comment.photo.id, comment.id), method: :delete %>
-    <% else %>
-    <% end %>
-  <% end %>  
-</div>
+<% @comments.each do |comment| %>
+  <div class="comments-container">
+    <div class="comments-user">
+      <%= link_to user_path(comment.user) do %>
+      <%= attachment_image_tag comment.user, :profile_image, size:"50x50", format: 'png', fallback: "no_image.png" %>
+      <% end %>
+    </div>
+    <div class="comments-body">
+      <%= link_to user_path(comment.user) do %>
+      <%= comment.user.name %>
+      <% end %>
+      <br> 
+      <%= comment.comment %>
+    </div>
+    <div class="comments-destroy">
+      <% if comment.user == current_user %>
+      <%= link_to "削除", photo_comment_path(comment.photo.id, comment.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+      <% else %>
+      <% end %>    
+    </div>
+  </div>
+<% end %>
 
 <div class="link_buttons">
  <%= link_to "一覧へ戻る", photos_path, class:"d-underline" %>  |  <%= link_to "投稿者の詳細", user_path(@user) %>

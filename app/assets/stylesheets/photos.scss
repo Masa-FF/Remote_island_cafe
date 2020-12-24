@@ -174,10 +174,36 @@ ul {
 	padding-bottom: 30px;
 }
 
+.comments-container {
+	background-color: #ffe4c4;
+	width: 500px;
+	hight: auto;
+	margin: 30px auto 0;
+	display: flex;
+	border-radius: 10px;
+}
+
+.comments-user {
+	border-radius: 50%;
+	padding: 10px 0 10px;
+	margin: 0 10px 0;
+}
+
+.comments-body {
+	width: 380px;
+	margin: auto 0 auto;
+	padding: 5px 0 5px;
+  font-size: 0.95;
+  font-family: 'Philosopher', serif;	
+}
+
+.comments-destroy {
+	margin: auto 7px 5px;
+}
+
 .link_buttons {
 	text-align: center;
 	margin-top: 70px;
 	margin-bottom: 50px;
 	height: 50px
-
 }
