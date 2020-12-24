@@ -9,6 +9,8 @@ class PhotosController < ApplicationController
   def show
     @photo = Photo.find(params[:id])
     @user = @photo.user
+    @comment = Comment.new
+    @comments = @photo.comments
   end
 
   def new
@@ -19,10 +21,10 @@ class PhotosController < ApplicationController
     @photo = Photo.new(photo_params)
     @photo.user_id = current_user.id
     if @photo.save
-    flash[:notice] = '投稿しました。' 
-    redirect_to photos_path
+      flash[:notice] = '投稿しました。' 
+      redirect_to photos_path
     else
-    render 'photos/new'
+      render 'photos/new'
     end
   end
   

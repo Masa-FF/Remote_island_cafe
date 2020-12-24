@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:show, :edit, :update, :destroy]
   resources :photos do
+    resources :comments, only: [:create, :destroy]
     resource :favorites, only: [:create, :destroy]
   end
   get 'top' => 'homes#top'

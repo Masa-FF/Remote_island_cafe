@@ -23,6 +23,9 @@
     <%= attachment_image_tag @photo, :image, size: "500x500", format: 'jpeg' %>
   </div>
   <div class="under_box">
+    <div class="comments-count">
+      <i class="fa fa-commenting-o"></i> <%= @photo.comments.count %>   
+    </div>
     <div id="favorites_buttons_<%= @photo.id %>">
       <%= render partial: 'favorites/favorite', locals: { photo: @photo} %>
     </div>
@@ -41,6 +44,23 @@
     </div>
     <% end %>
   </div>
+</div>
+
+<%= form_with model: [@photo, @comment], local: true do |f| %>
+  <%= f.text_area :comment, placeholder: "コメントを記入" %>
+  <%= f.submit '投稿' %>
+<% end %>
+
+<div class="comments">
+  <% @comments.each do |comment| %>
+    <%= attachment_image_tag @photo, :image, size: "100x100", format: 'jpeg' %>
+    <%= comment.user.name %>
+    <%= comment.comment %>
+    <% if comment.user == current_user %>
+    <%= link_to "削除", photo_comment_path(comment.photo.id, comment.id), method: :delete %>
+    <% else %>
+    <% end %>
+  <% end %>  
 </div>
 
 <div class="link_buttons">
