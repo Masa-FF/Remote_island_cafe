@@ -2,8 +2,8 @@ class PhotosController < ApplicationController
   before_action :authenticate_user!
   
   def index
-    @photos = Photo.all.page(params[:page]).reverse_order
-    #ページネーション(Kaminariを使用)
+    @photos = Photo.search(params[:search])
+    #検索対象を格納、条件分岐はモデルに記述
   end
 
   def show

@@ -69,6 +69,7 @@ gem 'font-awesome-rails'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'kaminari','~> 1.2.1'
+gem 'will_paginate', '~> 3.1.6'
 
 #最終行に記述
 gem 'dotenv-rails'
