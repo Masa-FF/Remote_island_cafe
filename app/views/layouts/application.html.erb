@@ -6,7 +6,6 @@
     <title>離島カフェ</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
@@ -18,17 +17,17 @@
         <nav>
           <ul class="main-nav">
             <% if user_signed_in? %>
-            <li><%= link_to "Top", root_path, :style=>"color: #444444;" %></li>
-            <li><%= link_to "Menu", menu_path, :style=>"color: #444444;" %></li>
-            <li><%= link_to "Access", access_path, :style=>"color: #444444;" %></li>
-            <li><%= link_to "Share", photos_path, :style=>"color: #444444;" %></li>            
-            <li><%= link_to image_tag("icon_019930_32.png"), user_path(current_user), :style=>"color: #444444;" %></li>
+              <li><%= link_to "Top", root_path %></li>
+              <li><%= link_to "Menu", menu_path %></li>
+              <li><%= link_to "Access", access_path %></li>
+              <li><%= link_to "Share", photos_path %></li>            
+              <li><%= link_to image_tag("icon_019930_32.png"), user_path(current_user) %></li>
             <% else %>
-            <li><%= link_to "Top", root_path, :style=>"color: #444444;" %></li>
-            <li><%= link_to "Menu", menu_path, :style=>"color: #444444;" %></li>
-            <li><%= link_to "Access", access_path, :style=>"color: #444444;" %></li>
-            <li><%= link_to "Share", photos_path, :style=>"color: #444444;" %></li>
-            <li><%= link_to image_tag("icon_019930_32.png"), new_user_session_path, :style=>"color: #444444;" %></li>
+              <li><%= link_to "Top", root_path %></li>
+              <li><%= link_to "Menu", menu_path %></li>
+              <li><%= link_to "Access", access_path %></li>
+              <li><%= link_to "Share", photos_path %></li>
+              <li><%= link_to image_tag("icon_019930_32.png"), new_user_session_path %></li>
             <% end %>
           </ul>
         </nav>

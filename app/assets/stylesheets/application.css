@@ -57,12 +57,12 @@ img {
   display: flex;
   text-transform: uppercase;
   margin-top: 35px;
-  list-style: none;
-  color: #3f2c3f;  
 }
 
 .main-nav li {
   margin: 0 20px 0;
+  list-style: none;
+  color: #3f2c3f; 
 }
 
 .page-header {
